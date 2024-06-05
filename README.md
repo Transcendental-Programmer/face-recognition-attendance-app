@@ -9,11 +9,11 @@ The Face Recognition Attendance System is a Python-based application designed to
 
 ## Images
 ### Home page
-> 
+> ![home](https://github.com/Transcendental-Programmer/face-recognition-attendance-app/blob/main/static/images/home.png)
 ### User List Page
-> 
+> ![user list](https://github.com/Transcendental-Programmer/face-recognition-attendance-app/blob/main/static/images/user_list.png)
 ### Attendance Page
-> 
+> ![attendance](https://github.com/Transcendental-Programmer/face-recognition-attendance-app/blob/main/static/images/attendance.png)
 
 ## Working
 1. **Recording Attendance:**
