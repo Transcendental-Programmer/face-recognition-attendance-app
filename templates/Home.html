@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            background-color: #2b2b2b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 2em;
+            color: #00ff00;
+            transition: transform 0.3s;
+        }
+        .menu-button:hover {
+            transform: scale(1.2);
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 60px;
+            transition: left 0.3s;
+            border-right: 3px solid #00ff00;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #444;
+        }
+        .open-sidebar {
+            left: 0;
+        }
+        .content {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .content p {
+            font-size: 1.2em;
+            margin-left: 20px;
+        }
+        .sample-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .sample-table th, .sample-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .sample-table th {
+            background-color: #444;
+        }
+        .sample-table td {
+            background-color: #2b2b2b;
+        }
+        .image-container {
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-button" onclick="toggleSidebar()">></button>
+    <div class="sidebar" id="sidebar">
+        <button class="menu-button" onclick="toggleSidebar()" style="font-size: 1.5em;">×</button>
+        <a href="/start">Take Attendance</a>
+        <a href="/listusers">List Users</a>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="static\images\img.jpg" alt="Placeholder Image">
+        </div>
+        <h1>Face Recognition Attendance System</h1>
+        <table class="sample-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>12345</td>
+                    <td>09:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>67890</td>
+                    <td>09:05 AM</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="content">
+            <p>Select one of the two options from the toggle menu:</p>
+            <p>1. User List</p>
+            <p>2. Take Attendance</p>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open-sidebar');
+        }
+    </script>
+</body>
+</html>
